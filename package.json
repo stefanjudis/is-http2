@@ -1,0 +1,38 @@
+{
+  "name": "is-http2",
+  "version": "1.0.0",
+  "description": "Detect if a server support http/2",
+  "main": "index.js",
+  "scripts": {
+    "lint": "eslint *.js",
+    "test": "npm run lint && nyc ava *.spec.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/stefanjudis/is-http2.git"
+  },
+  "keywords": [
+    "http/2",
+    "network",
+    "performance"
+  ],
+  "engines": {
+    "node": "^0.12"
+  },
+  "author": "stefan judis <stefanjudis@gmail.com>",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/stefanjudis/is-http2/issues"
+  },
+  "homepage": "https://github.com/stefanjudis/is-http2#readme",
+  "dependencies": {
+    "find-versions": "^2.0.0",
+    "pinkie-promise": "^2.0.0",
+    "semver": "^5.1.0"
+  },
+  "devDependencies": {
+    "ava": "^0.7.0",
+    "eslint": "^1.10.2",
+    "nyc": "^4.0.1"
+  }
+}
