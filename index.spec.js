@@ -1,5 +1,5 @@
 import test from 'ava';
-import isH2 from '.';
+import isH2 from './index';
 
 test.cb( 'is HTTP/2', t => {
   isH2( 'twitter.com' )
