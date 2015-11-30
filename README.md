@@ -2,7 +2,7 @@
 
 # is-http2
 
-Simple module to check if certain servers out there already support HTTP/2.
+Simple module to check if certain servers out there support HTTP/2.
 
 ## install
 
@@ -12,7 +12,7 @@ $ npm install --save is-http2
 
 ## Pre-requisites
 
-To make `is-http2` you need to have [openssl](http://openssl.org/) in a version greater than 1.0.0 installed and available in your `$path`.
+To make `is-http2` work, you need to have [openssl](http://openssl.org/) in a version greater than 1.0.0 installed and available in your `$path`.
 
 ## Basic usage
 
