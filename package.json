@@ -5,7 +5,8 @@
   "main": "index.js",
   "scripts": {
     "lint": "eslint *.js",
-    "test": "npm run lint && nyc ava *.spec.js"
+    "test": "npm run lint && nyc ava *.spec.js",
+    "coveralls": "nyc report --reporter=text-lcov | coveralls"
   },
   "repository": {
     "type": "git",
@@ -26,6 +27,7 @@
   },
   "homepage": "https://github.com/stefanjudis/is-http2#readme",
   "dependencies": {
+    "coveralls": "^2.11.4",
     "find-versions": "^2.0.0",
     "pinkie-promise": "^2.0.0",
     "semver": "^5.1.0"
