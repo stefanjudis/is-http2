@@ -20,8 +20,9 @@ To make `is-http2` you need to have [openssl](http://openssl.org/) in a version 
 
 **Description** : Check if server behind given url supports HTTP/2
 
-** url ** : Url to check HTTP/2 support for
-** options.includeSpdy ** : should SPDY be considered HTTP/2
+**url** : Url to check HTTP/2 support for
+
+**options.includeSpdy** : should SPDY be considered HTTP/2
 
 `isHttp2` returns a Promise which will be resolved with an Object containing `isHttp2` and `supportedProtocols`.
 
