@@ -56,7 +56,10 @@ function isH2( url, options ) {
         'true | openssl s_client -connect ' + url + ':443 -nextprotoneg ""',
         function( error, result ) {
           if ( error ) {
-            if ( /gethostbyname failure/.test( error.message ) ) {
+            if (
+              /gethostbyname failure/.test( error.message ) ||
+              /Connection refused/.test( error.message )
+            ) {
               return reject(
                 new Error( 'Connection to host `' + url + '` failed.' )
               );
