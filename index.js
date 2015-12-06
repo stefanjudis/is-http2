@@ -53,7 +53,7 @@ function isH2( url, options ) {
       }
 
       exec(
-        'true | openssl s_client -connect ' + url + ':443 -nextprotoneg ""',
+        'true | openssl s_client -connect ' + url + ':443 -servername ' + url + ' -nextprotoneg ""',
         function( error, result ) {
           if ( error ) {
             if (
