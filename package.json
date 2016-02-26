@@ -27,7 +27,7 @@
   },
   "homepage": "https://github.com/stefanjudis/is-http2#readme",
   "dependencies": {
-    "coveralls": "^2.11.4",
+    "coveralls": "^2.11.7",
     "find-versions": "^2.0.0",
     "pinkie-promise": "^2.0.0",
     "semver": "^5.1.0"
