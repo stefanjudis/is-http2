@@ -11,13 +11,20 @@ module.exports = {
    * @tested
    */
   getFormattedUrl : function getFormattedUrl( url ) {
-    var result = url.match( /^(http(s)?:\/\/)?(.+\..+?)(:\d+)?$/ );
+    var resultWeb = url.match( /^(http(s)?:\/\/)?(.+\..+?)(:\d+)?$/ );
 
-    if ( result ) {
-      return result[ 3 ];
+    if ( resultWeb ) {
+      return resultWeb[ 3 ];
     }
 
-    return result;
+    var resultLocal = url.match( /^localhost(:\d+?)?$/ );
+
+    // no formatting for localhost
+    if ( resultLocal ) {
+      return url;
+    }
+
+    return null;
   },
 
 

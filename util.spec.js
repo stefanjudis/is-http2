@@ -10,6 +10,10 @@ test( 'getFormattedUrl', t => {
   t.same( isH2Util.getFormattedUrl( 'http://twitter.' ), null );
   t.same( isH2Util.getFormattedUrl( 'http://twitter' ), null );
   t.same( isH2Util.getFormattedUrl( 'twitter' ), null );
+
+  t.same( isH2Util.getFormattedUrl( 'localhost' ), 'localhost' );
+  t.same( isH2Util.getFormattedUrl( 'localhost:8080' ), 'localhost:8080' );
+  t.same( isH2Util.getFormattedUrl( 'localhost:' ), null );
 } );
 
 test( 'getResultObject', t => {
