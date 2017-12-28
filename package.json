@@ -1,6 +1,6 @@
 {
   "name": "is-http2",
-  "version": "1.1.0",
+  "version": "1.2.0",
   "description": "Detect if a server support http/2",
   "main": "index.js",
   "scripts": {

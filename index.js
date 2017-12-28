@@ -17,9 +17,10 @@ var isH2Util     = require( './util' );
  */
 function isH2( url, options ) {
   options = options || {};
+  var openssl = options.openssl || 'openssl';
 
   return new Promise( function( resolve, reject ) {
-    exec( 'openssl version', function( error, result ) {
+    exec( openssl + ' version', function( error, result ) {
       if ( error ) {
         if ( error.code === 127 ) {
           return reject(
@@ -53,7 +54,7 @@ function isH2( url, options ) {
       }
 
       exec(
-        'true | openssl s_client -connect ' + url + ':443 -servername ' + url + ' -nextprotoneg ""',
+        'true | ' + openssl + ' s_client -connect ' + url + ':443 -servername ' + url + ' -nextprotoneg ""',
         function( error, result ) {
           if ( error ) {
             if (

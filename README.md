@@ -22,7 +22,10 @@ To make `is-http2` work, you need to have [openssl](http://openssl.org/) in a ve
 
 **url** : Url to check HTTP/2 support for
 
-**options.includeSpdy** : should SPDY be considered HTTP/2
+#### Options 
+* **includeSpdy** : optional: should SPDY be considered HTTP/2
+* **openssl** : optional: specify custom openssl command (i.e. '/usr/local/Cellar/openssl/1.0.2k/bin/openssl') 
+
 
 `isHttp2` returns a Promise which will be resolved with an Object containing `isHttp2` and `supportedProtocols`.
 
